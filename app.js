@@ -2,10 +2,12 @@
 /**
  * Module dependencies.
  */
+ var mongoose = require('mongoose');
 var express  = require('express');
 var connect = require('connect');
 var app      = express();
 var port     = process.env.PORT || 8080;
+mongoose.connect('mongodb://travey:travey1234@ds023520.mlab.com:23520/travey-node');
 
 // Configuration
 app.use(express.static(__dirname + '/public'));
